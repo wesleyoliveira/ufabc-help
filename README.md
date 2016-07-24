@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![Help! Logo](https://github.com/wesleyoliveira/ufabc-help/Docs/Help!_Git_Header.png)
 
 # UFABC Help!
@@ -24,3 +25,6 @@ O sistema a partir dessa versão, chamada de 2.0, será totalmente de código ab
 * [Matheus Rodrigues](https://github.com/matheusrod92)
 * [João Pedro](https://github.com/joaopedrovbs)
 * [Equipe do UFABC Help!]()
+=======
+# ufabc-help
+>>>>>>> origin/master

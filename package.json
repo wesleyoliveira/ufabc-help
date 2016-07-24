@@ -1,0 +1,52 @@
+{
+  "name": "ufabc-help",
+  "version": "1.0.0",
+  "author": "Wesley Oliveira",
+  "authors": [
+    "Wesley Oliveira",
+    "Ivan Seidel",
+    "João Pedro Vilas",
+    "Matheus Rodrigues"
+  ],
+  "description": "Ferramenta criada para avaliar professores",
+  "license": "MIT",
+  "README": "none",
+  "repository": "https://github.com/wesleyoliveira/ufabc-help",
+  "engines": {
+    "node": "6.2"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "make test",
+    "start": "./node_modules/.bin/forever --minUptime=5000 --spinSleepTime=5000 server.js",
+    "stop-deamon": "./node_modules/.bin/forever stopall",
+    "start-deamon": "start start -l logs.txt -o logs-stdout.txt -e logs-stderr.txt",
+    "postinstall": "./node_modules/.bin/bower install && ./node_modules/.bin/bower-installer"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "async": "2.0.0-rc.6",
+    "body-parser": "1.13.1",
+    "cheerio": "^0.20.0",
+    "compression": "1.5.0",
+    "connect-flash": "0.1.1",
+    "connect-mongo": "0.8.1",
+    "cookie-parser": "1.3.5",
+    "cookie-session": "1.1.0",
+    "csurf": "1.8.3",
+    "express": "4.12.4",
+    "express-session": "1.11.3",
+    "forever": "~0.14.1",
+    "lodash": "^4.12.0",
+    "method-override": "2.3.3",
+    "mongoose": "4.0.6",
+    "mongoose-timestamp": "0.4.0",
+    "mongoose-user": "0.0.1",
+    "morgan": "1.6.0",
+    "request": "^2.72.0",
+    "winston": "^2.2.0",
+    "bower": "latest",
+    "bower-installer": "latest"
+  },
+  "cacheDirectories": ["node_modules", "public/_components" ]
+}
