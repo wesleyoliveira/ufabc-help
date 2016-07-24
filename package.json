@@ -19,8 +19,8 @@
   "scripts": {
     "test": "make test",
     "start": "./node_modules/.bin/forever --minUptime=5000 --spinSleepTime=5000 server.js",
-    "stop-deamon": "./node_modules/.bin/forever stopall",
-    "start-deamon": "start start -l logs.txt -o logs-stdout.txt -e logs-stderr.txt",
+    "stop-deamon": "./node_modules/.bin/forever stop ufabchelp",
+    "start-deamon": "./node_modules/.bin/forever start --minUptime=5000 --spinSleepTime=5000 --uid \"ufabchelp\" -a -l logs.txt -o logs-stdout.txt -e logs-stderr.txt server.js",
     "postinstall": "./node_modules/.bin/bower install && ./node_modules/.bin/bower-installer"
   },
   "license": "ISC",
