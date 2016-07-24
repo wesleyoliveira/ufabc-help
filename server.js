@@ -28,9 +28,6 @@ global._TAG = function (tag){
  * Bootstrap Process
  */
 var configSetps = [
-  // Setup Logging
-	// require('./config/log'),
-
 	// Bootstrap Helpers
 	require('./config/helpers'),
 
