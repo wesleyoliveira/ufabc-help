@@ -50,7 +50,7 @@ var configSetps = [
 	require('./config/express-assets'),
 
   // Bootstrap API routes
-	require('./config/routes-app'),
+	require('./config/routes-api'),
 
   // Bootstrap routes
   require('./config/routes'),

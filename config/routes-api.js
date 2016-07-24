@@ -9,6 +9,17 @@ function config (app, next) {
   const ctrls = app.controllers
   const auth = app.helpers.isAuthenticated
 
+	/*
+	 * Configure Passport authentication
+	 */
+	const api = app.api = express()
+
+	/*
+	 * Api route (Admin only)
+	 * Root route: /api/...
+	 */
+	server.use('/api/', api)
+
   /*
    * Base route
    */
@@ -23,19 +34,19 @@ function config (app, next) {
 
     // Shortcuts
     console.log(TAG, `restify ${ctrl} [as ${path}]`)
-    server.get(path + '/create', Ctrl.create)
-    server.post(path + '/create', Ctrl.create)
-    server.get(path + '/update/:id', Ctrl.update)
-    server.get(path + '/destroy/:id', Ctrl.delete)
+    api.get(path + '/create', Ctrl.create)
+    api.post(path + '/create', Ctrl.create)
+    api.get(path + '/update/:id', Ctrl.update)
+    api.get(path + '/destroy/:id', Ctrl.delete)
 
     // REST
-    server.get(path + '/:id?', Ctrl.associated || Ctrl.find)
-    server.post(path, Ctrl.create)
-    server.put(path + '/:id', Ctrl.update)
-    server.delete(path + '/:id', Ctrl.delete)
+    api.get(path + '/:id?', Ctrl.associated || Ctrl.find)
+    api.post(path, Ctrl.create)
+    api.put(path + '/:id', Ctrl.update)
+    api.delete(path + '/:id', Ctrl.delete)
   }
 
-  restify('Test')
+  // restify('User')
 
   next()
 }
