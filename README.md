@@ -1,5 +1,5 @@
 ![Help! Logo](https://raw.githubusercontent.com/wesleyoliveira/ufabc-help/master/Docs/Help!_Git_Header.png)
-
+[![Build Status](https://travis-ci.org/wesleyoliveira/ufabc-help.svg?branch=master)](https://travis-ci.org/wesleyoliveira/ufabc-help)
 # UFABC Help!
 
 O sistema de avaliações do Help! é uma ferramenta criada por alunos da UFABC para avaliar professores e disciplinas, gerando dados abertos e informações colaborativas.
