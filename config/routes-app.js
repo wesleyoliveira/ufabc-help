@@ -35,7 +35,7 @@ function config (app, next) {
     server.delete(path + '/:id', Ctrl.delete)
   }
 
-  restify('Test');
+  restify('Test')
 
   next()
 }

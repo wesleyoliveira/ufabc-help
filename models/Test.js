@@ -4,7 +4,7 @@
 
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
-var ObjectId = Schema.Types.ObjectId
+// var ObjectId = Schema.Types.ObjectId
 var PluginTimestamp = require('mongoose-timestamp')
 
 /**
@@ -12,7 +12,7 @@ var PluginTimestamp = require('mongoose-timestamp')
  */
 
 var Model = new Schema({
-	nome: String,
+  nome: String,
 })
 
 /**

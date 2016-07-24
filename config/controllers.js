@@ -1,16 +1,18 @@
-var TAG = _TAG('config.controllers')
+const TAG = _TAG('config.controllers')
 
-function config(app, next){
-	var controllersDirectory = __dirname + '/..' + '/controllers/'
+const path = require('path')
+
+function config (app, next) {
+  var controllersDirectory = path.join(__dirname, '../controllers/')
 
   // Load All controllers
   app.controllers = {}
-	app.helpers.loader.load(controllersDirectory, app.controllers)
+  app.helpers.loader.load(controllersDirectory, app.controllers)
 
   // Debug loaded controllers
-	console.log(TAG, 'Controllers:', chalk.yellow(_.keys(app.controllers).join(',')))
+  console.log(TAG, 'Controllers:', chalk.yellow(_.keys(app.controllers).join(',')))
 
-	next()
+  next()
 }
 
 module.exports = config
