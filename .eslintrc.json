@@ -21,7 +21,10 @@
   "globals": {
     "document": false,
     "navigator": false,
-    "window": false
+    "window": false,
+    "_": true,
+    "_TAG": true,
+    "chalk": true
   },
 
   "rules": {

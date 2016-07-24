@@ -9,20 +9,21 @@ const path = require('path')
 // }
 //
 
-exports.load = function loadModules (dir, loaded){
+exports.load = function loadModules (dir, loaded) {
   // Default to creat a new object
-  loaded = (typeof loaded) == 'object' ? loaded : {}
+  loaded = (typeof loaded) === 'object' ? loaded : {}
 
   // Read all files from that path and load into modules
   fs.readdirSync(dir).forEach(function (file) {
-		if (file.indexOf('.js') < 0)
-			return
+    if (file.indexOf('.js') < 0) {
+      return
+    }
 
-		var mod = require(dir + file)
-		var name = path.basename(file, '.js')
+    var mod = require(dir + file)
+    var name = path.basename(file, '.js')
 
-		loaded[name] = mod
-	})
+    loaded[name] = mod
+  })
 
   return loaded
 }

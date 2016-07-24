@@ -1,5 +1,5 @@
 const env = process.env
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 1337
 
 module.exports = {
 	port: port,

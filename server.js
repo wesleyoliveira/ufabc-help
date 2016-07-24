@@ -31,7 +31,10 @@ var configSetps = [
 	// Bootstrap Helpers
 	require('./config/helpers'),
 
-	// Bootstrap Models and connect to DB
+	// Connect to DB
+	require('./config/mongoose'),
+
+	// Bootstrap Models
 	require('./config/models'),
 
 	// Bootstrap Controllers
