@@ -17,11 +17,11 @@
   },
   "main": "server.js",
   "scripts": {
-    "test": "make test",
-    "start": "./node_modules/.bin/forever --minUptime=5000 --spinSleepTime=5000 server.js --colors",
-    "stop-deamon": "./node_modules/.bin/forever stop ufabchelp",
-    "start-deamon": "./node_modules/.bin/forever start --minUptime=5000 --spinSleepTime=5000 --uid \"ufabchelp\" -a -l logs.txt -o logs-stdout.txt -e logs-stderr.txt server.js",
-    "postinstall": "./node_modules/.bin/bower install && ./node_modules/.bin/bower-installer"
+    "test": "eslint **/*.js",
+    "start": "forever --minUptime=5000 --spinSleepTime=5000 server.js --colors",
+    "stop-deamon": "forever stop ufabchelp",
+    "start-deamon": "forever start --minUptime=5000 --spinSleepTime=5000 --uid \"ufabchelp\" -a -l logs.txt -o logs-stdout.txt -e logs-stderr.txt server.js",
+    "postinstall": "bower install && bower-installer"
   },
   "dependencies": {
     "async": "2.0.0-rc.6",
@@ -55,7 +55,7 @@
     "eslint": "^3.1.1",
     "standard": "^7.1.2"
   },
-  "standard": {
+  "eslintConfig": {
     "globals": [
       "_",
       "_TAG",
