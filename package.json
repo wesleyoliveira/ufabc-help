@@ -9,7 +9,7 @@
     "Matheus Rodrigues"
   ],
   "description": "Ferramenta criada para avaliar professores",
-  "license": "MIT",
+  "license": "ISC",
   "README": "none",
   "repository": "https://github.com/wesleyoliveira/ufabc-help",
   "engines": {
@@ -23,7 +23,6 @@
     "start-deamon": "./node_modules/.bin/forever start --minUptime=5000 --spinSleepTime=5000 --uid \"ufabchelp\" -a -l logs.txt -o logs-stdout.txt -e logs-stderr.txt server.js",
     "postinstall": "./node_modules/.bin/bower install && ./node_modules/.bin/bower-installer"
   },
-  "license": "ISC",
   "dependencies": {
     "async": "2.0.0-rc.6",
     "body-parser": "1.13.1",
@@ -48,5 +47,19 @@
     "bower": "latest",
     "bower-installer": "latest"
   },
-  "cacheDirectories": ["node_modules", "public/_components" ]
+  "cacheDirectories": [
+    "node_modules",
+    "public/_components"
+  ],
+  "devDependencies": {
+    "eslint": "^3.1.1",
+    "standard": "^7.1.2"
+  },
+  "standard": {
+    "globals": [
+      "_",
+      "_TAG",
+      "chalk"
+    ]
+  }
 }

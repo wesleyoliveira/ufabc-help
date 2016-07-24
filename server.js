@@ -56,25 +56,25 @@ var configSetps = [
 	require('./config/lift'),
 ]
 
-
 //
 // Execute config steps and lift app
 //
-module.exports = function lift(cb){
-  async.eachSeries(configSetps, function (config, next){
+module.exports = function lift (cb) {
+  async.eachSeries(configSetps, function (config, next) {
     // Call configuration step with the app, and the callback
     config(app, next)
-  }, function (err){
-    if(err){
+  }, function (err) {
+    if (err) {
       console.error(_TAG(TAG), 'Failed to initialize Server: %s', err)
 
-      if(!cb)
+      if (!cb) {
         throw err
+      }
 
       cb && cb(err)
     }
 
-    console.log(_TAG(TAG, 'green'), 'Lifted. Port:', app.config.port, '['+app.config.env+']')
+    console.log(_TAG(TAG, 'green'), 'Lifted. Port:', app.config.port, `[${app.config.env}]`)
     cb && cb()
   })
 }
@@ -82,5 +82,6 @@ module.exports = function lift(cb){
 //
 // Autolift if it's the root module
 //
-if(require.main === module)
+if (require.main === module) {
   module.exports()
+}
